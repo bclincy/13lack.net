@@ -88,7 +88,16 @@
  * );
  * @endcode
  */
-$databases = [];
+$databases['default']['default'] = [
+  'database' => '13lack',
+  'username' => 'root',
+  'password' => 'root',
+  'host' => 'localhost',
+  'port' => '3306',
+  'driver' => 'mysql',
+  'prefix' => '',
+  'collation' => 'utf8mb4_general_ci',
+];
 
 /**
  * Customizing database settings.
@@ -251,7 +260,7 @@ $databases = [];
  *   );
  * @endcode
  */
-$config_directories = [];
+$config_directories = [CONFIG_SYNC_DIRECTORY => $app_root . '/../config'];
 
 /**
  * Settings:
@@ -280,7 +289,7 @@ $config_directories = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = file_get_contents($app_dir . '/../../../salt.hash');
 
 /**
  * Deployment identifier.
@@ -303,7 +312,7 @@ $settings['hash_salt'] = '';
  * After finishing the upgrade, be sure to open this file again and change the
  * TRUE back to a FALSE!
  */
-$settings['update_free_access'] = FALSE;
+$settings['update_free_access'] = true;
 
 /**
  * External access proxy settings:
@@ -442,7 +451,7 @@ $settings['update_free_access'] = FALSE;
  * performance reasons. Detection can be prevented by setting
  * class_loader_auto_detect to false, as in the example below.
  */
-# $settings['class_loader_auto_detect'] = FALSE;
+//$settings['class_loader_auto_detect'] = FALSE;
 
 /*
  * If the APC extension is not detected, either because APC is missing or
@@ -519,7 +528,7 @@ if ($settings['hash_salt']) {
  * must exist and be writable by Drupal. This directory must be relative to
  * the Drupal installation directory and be accessible over the web.
  */
-# $settings['file_public_path'] = 'sites/default/files';
+ $settings['file_public_path'] = 'sites/default/files/public';
 
 /**
  * Private file path:
@@ -764,7 +773,7 @@ $settings['entity_update_batch_size'] = 50;
  *
  * Keep this code block at the end of this file to take full effect.
  */
-#
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
+//
+// if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+//   include $app_root . '/' . $site_path . '/settings.local.php';
+// }
