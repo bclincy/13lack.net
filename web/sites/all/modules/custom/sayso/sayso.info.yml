@@ -1,0 +1,7 @@
+name: 'SaySo'
+type: module
+description: 'sayso is integration with backend utilities with surveys and endpoints'
+core: 8.x
+package: 'SaySo'
+dependencies:
+  - views

@@ -1,0 +1,15 @@
+sayso.article_list:
+  path: 'sayso/articles'
+  defaults:
+    _controller: 'Drupal\sayso\Controller\ArticleController::page'
+    _title: 'Our Custom article'
+  requirements:
+    _permission: 'access content'
+
+sayso.hello_world:
+  path: 'hello/{name}'
+  defaults:
+    _controller: 'Drupal\sayso\Controller\ArticleController::hello'
+    _title: 'New Space'
+  requirements:
+    _permission: 'access content'

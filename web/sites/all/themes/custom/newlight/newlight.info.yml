@@ -1,7 +1,44 @@
-name: newlight
-description: Drupal 8 first theme by Clincy
+name: Newlight
+description: 'The Double D, Designed and developed by <a href="brianclincy.com">Brian Clincy</a>. If you like it, or just want to hit me up for some other development <a href="brian@brianclincy.com">brian@brianclincy.com</a> is my email'
 type: theme
+package: newlight-theme
+version: VERSION
 core: 8.x
+hidden: true
+
 libraries:
   - newlight/global-css
   - newlight/global-js
+
+stylesheets-remove:
+  - core/themes/stable/css/views/views.module.css
+  - core/themes/stable/css/system/components/align.module.css
+
+libraries-extend:
+  user/drupal.user:
+    - classy/user
+  core/drupal.dropbutton:
+    - classy/dropbutton
+  core/drupal.dialog:
+    - classy/dialog
+  file/drupal.file:
+    - classy/file
+  core/drupal.progress:
+    - classy/progress
+
+regions:
+  header: Header
+  content: Content
+  footer: Footer'
+  menu: 'Main Menu'
+  featured: Featured
+  breadcrumb: Breadcrumb
+  sidebar_first: Sidebar
+  upper_footer: 'Upper Footer'
+  lower_footer: 'Lower Footer'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  highlighted: Highlighted
+  featured_top: 'Featured top'

@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Contains sayso.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+function sayso_theme($existing, $type, $theme, $path) {
+  $i = $type;
+  return [
+    'article_list' => [
+      'variables' => ['items' =>  [], 'title' => '']
+    ]
+  ];
+}
+
+function sayso_preprocess_html(&$vars) {
+  $i = 0;
+}
+
+/**
+ * Implements hook_help().
+ */
+function sayso_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the sayso module.
+    case 'help.page.sayso':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('sayso is integration with backend utilities with surveys and endpoints') . '</p>';
+      return $output;
+
+    default:
+  }
+}

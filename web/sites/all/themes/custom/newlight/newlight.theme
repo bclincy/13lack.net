@@ -1,0 +1,20 @@
+<?php
+
+
+function newlight_page_attachments_alter(array &$page) {
+  return true;
+}
+
+function newlight_preprocess_html (&$variables) {
+  $new = $variables;
+}
+
+function newlight_preprocess_page(&$vars) {
+  if (isset($vars['node'])) {
+    $node = $vars['node'];
+    if ($node->isset('field_numero_cin')) {
+      $field_cin = $node->get('field_numero_cin');
+      $vars['field_cin'] = $field_image->value();
+    }
+  }
+}

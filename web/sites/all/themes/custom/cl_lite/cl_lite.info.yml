@@ -1,0 +1,15 @@
+name: CL Lite
+type: theme
+description: 'The Double D, Designed and developed by <a href="brianclincy.com">Brian Clincy</a>. If you like it, or just want to hit me up for some other development <a href="brian@brianclincy.com">brian@brianclincy.com</a> is my email'
+package: Sayso
+core: 8.x
+libraries:
+  - cl_lite/bootstrap
+base theme: false
+
+regions:
+  content: Content
+  menu: Menu
+  header: header
+  footer: Footer
+
