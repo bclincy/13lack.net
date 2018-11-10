@@ -9,7 +9,16 @@ sayso.article_list:
 sayso.hello_world:
   path: 'hello/{name}'
   defaults:
-    _controller: 'Drupal\sayso\Controller\ArticleController::hello'
+    _controller: '\Drupal\sayso\Controller\TableSortExampleController::description'
     _title: 'New Space'
   requirements:
     _permission: 'access content'
+
+sayso.description:
+  path: '/examples/tablesort-example'
+  defaults:
+    _controller: '\Drupal\sayso\Controller\TableSortExampleController::description'
+  requirements:
+    _permission: 'access content'
+  options:
+    no_cache: 'TRUE'

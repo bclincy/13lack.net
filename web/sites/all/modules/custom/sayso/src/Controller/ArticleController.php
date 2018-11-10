@@ -37,4 +37,11 @@ class ArticleController extends ControllerBase {
 
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  protected function getModuleName() {
+    return 'Sayso';
+  }
+
 }

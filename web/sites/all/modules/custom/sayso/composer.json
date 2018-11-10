@@ -1,28 +1,28 @@
 {
   "name": "drupal/sayso",
+  "version": "1.0.2",
   "type": "drupal-module",
   "description": "sayso is integration with backend utilities with surveys and endpoints",
-  "keywords": ["Drupal"],
+  "keywords": [
+    "drupal",
+    "REST API"
+  ],
+  "homepage": "http://brianclincy.com/drupal/",
+  "time": "2018-09-06",
   "license": "GPL-2.0+",
-  "homepage": "https://www.drupal.org/project/sayso",
-  "minimum-stability": "dev",
   "authors": [
     {
       "name": "Brian Clincy",
       "email": "bclincy@gmail.com",
       "homepage": "http://brianclincy.com",
       "role": "Developer"
-    },
-    {
-      "name": "Brian Clincy",
-      "email": "bclincy@gmail.com",
-      "homepage": "http://brianclincy.com",
-      "role": "Designer"
-    },
+    }
   ],
+  "require": {
+    "php": " >= 7.0"
+  },
   "support": {
     "issues": "https://www.drupal.org/project/issues/sayso",
     "source": "http://cgit.drupalcode.org/sayso"
-  },
-  "require": { }
+  }
 }
